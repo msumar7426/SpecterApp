@@ -1,0 +1,13 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+llama-index==0.12.9
+llama-index-core==0.12.9
+llama-cloud==0.1.6
+llama-parse==0.5.20
+python-dotenv==1.0.1
+aiofiles==24.1.0
+pydantic==2.10.5
+httpx==0.28.1
+regex==2026.1.15
+ftfy==6.3.1

@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "properties": {
+    "raw_urdu_text": {
+      "type": "string",
+      "description": "The complete, unedited Urdu text extracted directly from the FIR image via OCR, preserving all characters and formatting as much as possible."
+    },
+    "fir_structured_data": {
+      "type": "object",
+      "properties": {
+        "fir_number": {
+          "type": "string"
+        },
+        "police_station": {
+          "type": "string"
+        },
+        "district": {
+          "type": "string"
+        },
+        "registration_date": {
+          "type": "string"
+        },
+        "registration_time": {
+          "type": "string"
+        },
+        "sections_of_law": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "complainant_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "father_or_husband_name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "contact_number": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "accused_details": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": ["string", "null"]
+              },
+              "father_or_husband_name": {
+                "type": ["string", "null"]
+              },
+              "address": {
+                "type": ["string", "null"]
+              },
+              "description": {
+                "type": ["string", "null"]
+              }
+            }
+          }
+        },
+        "occurrence_details": {
+          "type": "object",
+          "properties": {
+            "date_of_occurrence": {
+              "type": "string"
+            },
+            "time_of_occurrence": {
+              "type": "string"
+            },
+            "place_of_occurrence": {
+              "type": "string"
+            },
+            "distance_from_police_station": {
+              "type": ["string", "null"]
+            }
+          }
+        },
+        "brief_facts_of_case": {
+          "type": "string"
+        },
+        "witnesses": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "father_or_husband_name": {
+                "type": ["string", "null"]
+              },
+              "address": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "investigating_officer_details": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "rank": {
+              "type": "string"
+            },
+            "badge_number": {
+              "type": ["string", "null"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["raw_urdu_text", "fir_structured_data"]
+}
